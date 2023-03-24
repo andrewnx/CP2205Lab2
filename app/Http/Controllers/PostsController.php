@@ -91,10 +91,4 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts')->with('success', 'Post has been deleted successfully.');
     }
-
-    public function indexPostsByCategory(Category $category)
-    {
-        $posts = $category->posts;
-        return view('posts.index', compact('posts'));
-    }
 }

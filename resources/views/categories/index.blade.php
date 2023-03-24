@@ -7,6 +7,11 @@
         <div class="card">
             <div class="card-header">{{ $category->name }}</div>
 
+            <div class="card-body">
+                <a href="{{ route('categories.show', $category->id )}}" class="btn btn-primary">View
+                    Category</a>
+            </div>
+
             <div class="card-footer">
                 <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-warning">Edit</a>
                 <form action="{{ route('categories.destroy', $category->id) }}" method="post" class="d-inline">

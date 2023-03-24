@@ -64,7 +64,7 @@ Route::put('/categories/{id}', [CategoriesController::class, 'update'])->name('c
 // Delete a specific category from the database
 Route::delete('/categories/{id}', [CategoriesController::class, 'destroy'])->name('categories.destroy');
 
-Route::get('categories/{category}/showposts', [CategoriesController::class, 'indexPostsByCategory'])->name('Categories.showposts');
+Route::get('categories/{category}/showposts', [CategoriesController::class, 'indexPostsByCategory'])->name('categories.showposts');
 
 Route::resource('posts', PostsController::class);
 Route::resource('categories', CategoriesController::class);

@@ -83,4 +83,10 @@ class CategoriesController extends Controller
         $category->delete();
         return redirect('/categories')->with('success', 'Category has been deleted successfully.');
     }
+
+    public function indexPostsByCategory(Category $category)
+    {
+        $posts = $category->posts()->get();
+        return view('categories.showposts', compact('category', 'posts'));
+    }
 }
