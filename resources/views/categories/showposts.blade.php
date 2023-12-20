@@ -15,6 +15,8 @@
     </div>
 
     <div class="card-footer">
+        <a href="{{ route('posts.create', ['category_id' => $category->id]) }}" class="btn btn-primary mb-2">Create
+            Post</a>
         <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-warning">Edit</a>
         <form action="{{ route('categories.destroy', $category->id) }}" method="post" class="d-inline">
             @csrf

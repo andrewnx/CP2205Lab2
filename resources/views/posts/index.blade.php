@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="mb-2">
+    <a href="{{ route('posts.create') }}" class="btn btn-primary">Create Post</a>
+</div>
 <div class="row">
     @foreach($posts as $post)
     <div class="col-md-4">

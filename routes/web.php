@@ -18,9 +18,7 @@ use App\Http\Controllers\CategoriesController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CategoriesController::class, 'index'])->name('categories.index');
 
 // Display a list of all posts
 Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');

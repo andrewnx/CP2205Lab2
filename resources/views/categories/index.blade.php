@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="mb-2">
+    <a href="{{ route('categories.create') }}" class="btn btn-primary">Create Category</a>
+</div>
 <div class="row">
     @foreach($categories as $category)
     <div class="col-md-4">
